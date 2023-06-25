@@ -1,0 +1,43 @@
+server:
+  port: 4002
+  ssl:
+    key-store: classpath:zhanggq.top.jks
+    key-store-password: 1zg758ig3qsq
+    key-store-type: JKS
+  servlet:
+    context-path: /medicine
+spring:
+  application:
+    name: medicine_sale
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #      url: jdbc:mysql://localhost:3306/medicine_sale?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://81.70.5.237:3307/medicine_sale?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: root
+  redis:
+    host: 81.70.5.237
+    port: 6379
+    password: 1234
+    database: 0
+    timeout: 5000
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+medicine:
+  path: E:\image\medicine\
+minio:
+  endpoint: http://81.70.5.237:2709
+  accessKey: zhanggq
+  secretKey: gq681398
+  bucketName: medicine
