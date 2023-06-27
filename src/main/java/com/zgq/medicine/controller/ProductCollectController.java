@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/api/collect")
 @RequiredArgsConstructor
-@CrossOrigin
 @Api(tags = "产品收藏模块")
 public class ProductCollectController {
     private final ProductCollectService collectService;

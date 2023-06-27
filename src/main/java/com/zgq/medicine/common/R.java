@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel("返回结果")
-public class R<T> {
+public class R<T> implements Serializable {
 
     @ApiModelProperty("状态码")
     private Integer code; // 编码：0成功，1和其它数字为失败

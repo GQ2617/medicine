@@ -32,7 +32,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/order")
-@CrossOrigin
 @Transactional
 @Api(tags = "订单模块")
 public class SaleOrderController {

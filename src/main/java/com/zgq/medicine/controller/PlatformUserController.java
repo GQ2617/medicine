@@ -26,7 +26,6 @@ import java.util.Map;
  */
 
 @RestController
-@CrossOrigin
 @RequestMapping("/user")
 @Api(tags = "商城用户模块")
 public class PlatformUserController {

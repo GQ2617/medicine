@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/address")
-@CrossOrigin
 @Api(tags = "地址模块")
 public class PlatformAddressController {
     @Autowired

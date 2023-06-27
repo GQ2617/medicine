@@ -19,7 +19,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/shopcart")
-@CrossOrigin
 @Api(tags = "购物车模块")
 public class SaleShopCartController {
     @Autowired

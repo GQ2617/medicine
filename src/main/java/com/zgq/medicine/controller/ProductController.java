@@ -28,7 +28,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/product")
-@CrossOrigin
 @Transactional
 @Api(tags = "产品信息")
 public class ProductController {

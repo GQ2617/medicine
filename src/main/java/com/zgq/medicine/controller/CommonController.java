@@ -43,7 +43,6 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping("/file")
-@CrossOrigin
 @Slf4j
 @Api(tags = "文件服务")
 public class CommonController {

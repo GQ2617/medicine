@@ -36,7 +36,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("platformAdmin")
-@CrossOrigin
 @Api(tags = "平台管理员")
 public class PlatformAdminController {
     /**
@@ -146,7 +145,6 @@ public class PlatformAdminController {
      */
     @PutMapping("/pwd")
     @ApiOperation("修改管理员密码")
-    @CrossOrigin
     public R updatePwd(Integer id, String oldPwd, String newPwd) {
         PlatformAdmin admin = platformAdminService.getById(id);
         if (oldPwd.equals(newPwd)) {

@@ -20,7 +20,6 @@ import java.util.List;
  * Description:
  */
 @RestController
-@CrossOrigin
 @Slf4j
 @RequestMapping("/api/file")
 @Api(tags = "minio文件服务")

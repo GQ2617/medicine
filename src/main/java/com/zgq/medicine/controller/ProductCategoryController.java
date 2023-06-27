@@ -30,7 +30,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/category")
-@CrossOrigin
 @Api(tags = "产品分类")
 public class ProductCategoryController {
     @Autowired

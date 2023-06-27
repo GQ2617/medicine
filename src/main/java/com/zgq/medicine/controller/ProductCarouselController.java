@@ -6,6 +6,8 @@ import com.zgq.medicine.service.ProductCarouselService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +20,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/carousel")
-@CrossOrigin
 @Transactional
 @Api(tags = "轮播图模块")
 public class ProductCarouselController {
@@ -27,12 +28,14 @@ public class ProductCarouselController {
 
     @GetMapping
     @ApiOperation("获取轮播图")
+    @Cacheable(value = "carouse", key = "'carouse'", unless = "#result==null")
     public R get() {
         return R.success(carouselService.list());
     }
 
     @PutMapping
     @ApiOperation("设置轮播图")
+    @CacheEvict(value = "carouse", allEntries = true)
     public R update(@RequestBody List<ProductCarousel> carousels) {
         for (ProductCarousel carousel : carousels) {
             carouselService.updateById(carousel);

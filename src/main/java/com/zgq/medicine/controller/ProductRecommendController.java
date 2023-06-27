@@ -26,7 +26,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/recommend")
-@CrossOrigin
 @Transactional
 @Api(tags = "推荐模块")
 public class ProductRecommendController {
